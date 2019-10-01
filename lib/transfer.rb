@@ -23,7 +23,7 @@ class Transfer
         receiver.balance = receiver.balance + amount
         @status = "complete"
         counter += 1
-      end
+        end
       end
       if !sender.valid?
         @status = "rejected"
