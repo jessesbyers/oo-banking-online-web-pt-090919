@@ -23,7 +23,6 @@ class Transfer
       receiver.balance = receiver.balance + amount
       @status = "complete"
     end
-      "Transaction rejected. Please check your account balance."
   end
 
       def reverse_transfer
