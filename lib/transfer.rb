@@ -17,16 +17,22 @@ class Transfer
   def execute_transaction
 
     if valid?
-      # 1.times {
+      counter = 0
+      while counter <= 1
         sender.balance = sender.balance - amount
         receiver.balance = receiver.balance + amount
+        @status = "complete"
+        counter += 1
+      end
+      if !sender.valid?
+        @status = "rejected"
+        "Transaction rejected. Please check your account balance."
+      end
+        
+      # 1.times {
       # }
-      @status = "complete"
-    end
-    if !sender.valid?
-      @status = "rejected"
-      "Transaction rejected. Please check your account balance."
-    end
+      
+  
 
   end
 
