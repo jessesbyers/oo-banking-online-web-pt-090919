@@ -1,3 +1,9 @@
 class Transfer
-  # your code here
+
+  def initialize(acc1, acc2, amount)
+    
+  end
+
+
+
 end
