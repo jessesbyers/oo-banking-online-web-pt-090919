@@ -23,7 +23,6 @@ class Transfer
         # @status = "rejected"
         "Transaction #{@status}. Please check your account balance."
       end
-      binding.pry
   end
 
 
