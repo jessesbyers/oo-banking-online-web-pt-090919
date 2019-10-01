@@ -18,7 +18,7 @@ class Transfer
 
     if sender.valid?
 
-      transfer.status = "complete"
+      @status = "complete"
 
 
 
