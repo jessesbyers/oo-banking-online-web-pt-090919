@@ -25,9 +25,9 @@ class Transfer
         counter += 1
         end
 
-      else
+      elsif !sender.valid?
         @status = "rejected"
-        return "Transaction rejected. Please check your account balance."
+        "Transaction rejected. Please check your account balance."
       end
 
       # 1.times {
