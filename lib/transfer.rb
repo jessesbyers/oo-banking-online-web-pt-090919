@@ -15,9 +15,8 @@ class Transfer
   end
 
   def execute_transaction
-
+    1.times {
     if valid?
-
         sender.balance = sender.balance - amount
         receiver.balance = receiver.balance + amount
         @status = "complete"
@@ -26,6 +25,7 @@ class Transfer
         @status = "rejected"
         "Transaction rejected. Please check your account balance."
       end
+    }
 
       # 1.times {
       # }
