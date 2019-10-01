@@ -17,7 +17,7 @@ class Transfer
   def execute_transaction
 
     if valid?
-      1.times(sender.balance = sender.balance - amount)
+      sender.balance = sender.balance - amount
       receiver.balance = receiver.balance + amount
       @status = "complete"
     else
