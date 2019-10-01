@@ -19,12 +19,14 @@ class Transfer
       sender.balance = sender.balance - amount
       receiver.balance = receiver.balance + amount
       @status = "complete"
-    # elsif sender.valid? == false || sender.balance < amount
-  else
+
+    elsif sender.balance < amount
         @status = "rejected"
-        return "Transaction rejected. Please check your account balance."
+        "Transaction rejected. Please check your account balance."
     end
   end
+
+  # sender.valid? == false || 
 
       def reverse_transfer
         if @status == "complete"
